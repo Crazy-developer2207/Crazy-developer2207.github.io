@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎂 Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #ffebf0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: all 0.5s ease-in-out;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 1s;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    button {
+      background: #ff4081;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .birthday-photo, .final-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-top: 15px;
+      box-shadow: 0 0 15px rgba(255, 64, 129, 0.3);
+    }
+
+    .quote, .final-quote {
+      font-style: italic;
+      color: #444;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .photo-choice {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 3px solid transparent;
+      transition: 0.3s;
+    }
+
+    .photo:hover {
+      border-color: #ff4081;
+    }
+
+    .music-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 22px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="C:\Users\Stoic\OneDrive\Documents\SALONI\s voice song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <button class="music-toggle" onclick="toggleMusic()">🔊</button>
+
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide1">
+      <h1>🎉 Happy Birthday!</h1>
+      <p>Click the button to start your surprise!</p>
+      <button onclick="nextSlide(1)">Start</button>
+    </div>
+
+    <!-- Slide 2 - Birthday Video -->
+    <div class="slide" id="slide2">
+      <h2>🎬 A Little Surprise!</h2>
+      <p>Here's something special just for you 💝</p>
+      <video id="bdayVideo" width="100%" controls poster="poster.jpg">
+        <source src="C:\Users\Stoic\OneDrive\Documents\SALONI\s  intro video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button onclick="nextSlide(2)">Continue</button>
+    </div>
+
+    <!-- Slide 3 - Choose Best Photo -->
+    <div class="slide" id="slide3">
+      <h2>📸 Task 2</h2>
+      <p>Choose your best photo from below 👇</p>
+      <div class="photo-choice">
+        <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S11.jpg" alt="Photo 1" class="photo" onclick="choosePhoto(1)">
+        <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S19.jpg" alt="Photo 2" class="photo" onclick="choosePhoto(2)">
+      </div>
+      <p id="teaseText"></p>
+    </div>
+
+    <!-- Slide 4 - Her Photo + Quote -->
+    <div class="slide" id="slide4">
+      <h2>💖 Just for You</h2>
+      <p>Look at this beautiful picture of you!</p>
+      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S2.jpg" alt="Birthday Girl" class="birthday-photo">
+      <p class="quote">"हँसते दिलो में ग़म भी हैं, मुस्कुराती आँखे कभी नम भी हैं, दुआ करते है आपकी हंसी कभी न रुके, क्योकि आपकी मुस्कुराहट के दीवाने हम भी हैं​"</p>
+      <button onclick="nextSlide(4)">Continue</button>
+    </div>
+
+     <!-- Slide 5 - Her Photo + Quote -->
+    <div class="slide" id="slide5">
+      <h2>💖 Just for You</h2>
+      <p>Look at this beautiful picture of you!</p>
+      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S7.jpg" alt="Birthday Girl" class="birthday-photo">
+      <p class="quote">"चाँदी सोना एक तरफ़ तेरा होना एक तरफ़ एक तरफ़ तेरी आँखें जादू टोना एक तरफ़. Happy Birthday!"</p>
+      <button onclick="nextSlide(5)">Continue</button>
+    </div>
+
+     <!-- Slide 6 - Her Photo + Quote -->
+    <div class="slide" id="slide6">
+      <h2>💖 Just for You</h2>
+      <p>Look at this beautiful picture of you!</p>
+      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S10.jpg" alt="Birthday Girl" class="birthday-photo">
+      <p class="quote">"इतना खूबसूरत चेहरा है तुम्हारा !! हर दिल दीवाना है  तुम्हारा !! लोग कहते है चांद का टुकड़ा हो तुम !! लेकिन हम कहते है चांद टुकड़ा है तुम्हारा !!. Happy Birthday!"</p>
+      <button onclick="nextSlide(6)">Continue</button>
+    </div>
+
+     <!-- Slide 7 - Her Photo + Quote -->
+    <div class="slide" id="slide7"> 
+      <h2>💖 Just for You</h2>
+      <p>Look at this beautiful picture of you!</p>
+      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S13.jpg" alt="Birthday Girl" class="birthday-photo">
+      <p class="quote">"कोई इतना प्यारा कैसे हो सकता है, फिर सारे का सारा कैसे हो सकता है,<br>तुझसे बात हो तभी कमी महसूस होती है,<br>तेरे बगैर गुज़ारा कैसे हो सकता है<br>Happy Birthday!"</p>
+      <button onclick="nextSlide(7)">Continue</button>
+    </div>
+
+     <!-- Slide 8 - Her Photo + Quote -->
+    <div class="slide" id="slide8">
+      <h2>💖 Just for You</h2>
+      <p>Look at this beautiful picture of you!</p>
+      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S23.jpg " alt="Birthday Girl" class="birthday-photo">
+      <p class="quote">"जब नज़रों से गिरती है वो परछाई हल्की,
+लगता है जैसे चांदनी ज़मीन पर उतरी।
+हर अदा में छुपा है कोई बेफ़िक्र सा राज़,
+जैसे बहारों ने खुद पहना हो साज।
+
+हँसी उसकी जैसे कोयल की पहली पुकार,
+जो मन के सूने कोनों को दे जाए प्यार।
+बातों में उसकी है बारिश की सौंधी खुशबू,
+हर अल्फ़ाज़ बने जैसे कोई मीठा रुबू।
+
+नज़रों की गहराई में समंदर भी खो जाए,
+एक बार जो देखे, फिर दोबारा देखना चाहे।
+चाल में जैसे लहराती हो कोई शबनम,
+नज़ाकत में बसी हो खुद खुदा की करम।
+
+उसकी मौजूदगी से रौशन हो जाता है जहां,
+जैसे सुबह के साथ आता हो नया आसमां।
+वो है तो हर रंग पूरा, हर पल हसीन,
+जैसे अधूरी तहरीर में मिल जाए यक़ीन। Happy Birthday!"</p>
+      <button onclick="nextSlide(8)">Continue</button>
+    </div>
+
+    <!-- Slide 9 - Ending Video -->
+    <div class="slide" id="slide9">
+      <video id="endVideo" width="100%" controls autoplay poster="end-poster.jpg">
+        <source src="C:\Users\Stoic\OneDrive\Documents\SALONI\S end video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button onclick="nextSlide(9)">Continue</button>
+    </div>
+
+    <!-- Slide 10 - Final Photo and Quote -->
+    <div class="slide" id="slide10">
+      <h2>🌟 One Last Thing...</h2>
+      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\S&R.jpg" alt="Beautiful Moment" class="final-photo">
+      <p class="final-quote">
+        "I wll always be there for you,<br>I will never hurt you,<br>I will never break you trust,<br>JUst stay confident,happy,and achive evry thing that you want in your life.Happy Birthday!"
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function nextSlide(currentSlideNum) {
+      const current = document.getElementById('slide' + currentSlideNum);
+      const next = document.getElementById('slide' + (currentSlideNum + 1));
+      if (current && next) {
+        current.classList.remove('active');
+        next.classList.add('active');
+      }
+    }
+
+    let photoClickCount = 0;
+    function choosePhoto(choice) {
+      const teaseText = document.getElementById('teaseText');
+      photoClickCount++;
+      if (photoClickCount === 1) {
+        teaseText.textContent = choice === 1 
+          ? "Hmm... no no, the second one is better 😜"
+          : "Really? The first one is clearly better 😏";
+      } else if (photoClickCount === 2) {
+        teaseText.textContent = choice === 1 
+          ? "Haha no, now the second one looks better again 😂"
+          : "Oops! The first one still wins 💅";
+      } else {
+        teaseText.textContent = "Okay okay, you look beautiful in both! 😍";
+        setTimeout(() => nextSlide(3), 2500);
+      }
+    }
+
+    // Background Music Controls
+    function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      const btn = document.querySelector('.music-toggle');
+      if (music.paused) {
+        music.play();
+        btn.textContent = "🔊";
+      } else {
+        music.pause();
+        btn.textContent = "🔇";
+      }
+    }
+
+    // Attempt to resume music after interaction (autoplay policy)
+    window.addEventListener('click', () => {
+      const music = document.getElementById('bgMusic');
+      if (music.paused) {
+        music.play().catch(() => {});
+      }
+    }, { once: true });
+  </script>
+</body>
+</html>
