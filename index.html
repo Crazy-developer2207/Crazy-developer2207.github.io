@@ -268,14 +268,14 @@
       photoClickCount++;
       if (photoClickCount === 1) {
         teaseText.textContent = choice === 1 
-          ? "Hmm... no no, the second one is better 😜"
+          ? "Hmm I think second one is better 😜"
           : "Really? The first one is clearly better 😏";
       } else if (photoClickCount === 2) {
         teaseText.textContent = choice === 1 
           ? "Haha no, now the second one looks better again 😂"
           : "Oops! The first one still wins 💅";
       } else {
-        teaseText.textContent = "Okay okay, you look beautiful in both! 😍";
+        teaseText.textContent = "yrr,you are beautifull every time! 😍";
         setTimeout(() => nextSlide(3), 2500);
       }
     }
