@@ -115,8 +115,8 @@
 
   <!-- Background Music -->
   <audio id="bgMusic" autoplay loop>
-    <source src="C:\Users\Stoic\OneDrive\Documents\SALONI\s voice song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+   <audio src="s-voice-song.mp3" controls></audio>
+
   </audio>
 
   <div class="container">
@@ -129,110 +129,128 @@
       <button onclick="nextSlide(1)">Start</button>
     </div>
 
-    <!-- Slide 2 - Birthday Video -->
-    <div class="slide" id="slide2">
-      <h2>🎬 A Little Surprise!</h2>
-      <p>Here's something special just for you 💝</p>
-      <video id="bdayVideo" width="100%" controls poster="poster.jpg">
-       <video src="s-intro-video.mp4" controls width="400"></video>
+  <!-- Slide 2 - Birthday Video -->
+<div class="slide" id="slide2">
+  <h2>🎬 A Little Surprise!</h2>
+  <p>Here's something special just for you 💝</p>
+  
+  <video id="bdayVideo" width="100%" controls poster="poster.jpg">
+    <source src="s-intro-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <button onclick="nextSlide(2)">Continue</button>
+</div>
 
-        Your browser does not support the video tag.
-      </video>
-      <button onclick="nextSlide(2)">Continue</button>
-    </div>
 
-    <!-- Slide 3 - Choose Best Photo -->
-    <div class="slide" id="slide3">
-      <h2>📸 Task 2</h2>
-      <p>Choose your best photo from below 👇</p>
-      <div class="photo-choice">
-        <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s11.jpg" alt="Photo 1" class="photo" onclick="choosePhoto(1)">
-        <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s19.jpg" alt="Photo 2" class="photo" onclick="choosePhoto(2)">
-      </div>
-      <p id="teaseText"></p>
-    </div>
+   <!-- Slide 3 - Choose Best Photo -->
+<div class="slide" id="slide3">
+  <h2>📸 Task 2</h2>
+  <p>Choose your best photo from below 👇</p>
+  <div class="photo-choice">
+    <img src="s11.jpg" alt="Photo 1" class="photo" onclick="choosePhoto(1)">
+    <img src="s19.jpg" alt="Photo 2" class="photo" onclick="choosePhoto(2)">
+  </div>
+  <p id="teaseText"></p>
+</div>
 
-    <!-- Slide 4 - Her Photo + Quote -->
-    <div class="slide" id="slide4">
-      <h2>💖 Just for You</h2>
-      <p>Look at this beautiful picture of you!</p>
-      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s2.jpg" alt="Birthday Girl" class="birthday-photo">
-      <p class="quote">"हँसते दिलो में ग़म भी हैं, मुस्कुराती आँखे कभी नम भी हैं, दुआ करते है आपकी हंसी कभी न रुके, क्योकि आपकी मुस्कुराहट के दीवाने हम भी हैं​"</p>
-      <button onclick="nextSlide(4)">Continue</button>
-    </div>
+<!-- Slide 4 - Her Photo + Quote -->
+<div class="slide" id="slide4">
+  <h2>💖 Just for You</h2>
+  <p>Look at this beautiful picture of you!</p>
+  <img src="s2.jpg" alt="Birthday Girl" class="birthday-photo">
+  <p class="quote">"हँसते दिलो में ग़म भी हैं, मुस्कुराती आँखे कभी नम भी हैं, दुआ करते है आपकी हंसी कभी न रुके, क्योकि आपकी मुस्कुराहट के दीवाने हम भी हैं​"</p>
+  <button onclick="nextSlide(4)">Continue</button>
+</div>
 
-     <!-- Slide 5 - Her Photo + Quote -->
-    <div class="slide" id="slide5">
-      <h2>💖 Just for You</h2>
-      <p>Look at this beautiful picture of you!</p>
-      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s7.jpg" alt="Birthday Girl" class="birthday-photo">
-      <p class="quote">"चाँदी सोना एक तरफ़ तेरा होना एक तरफ़ एक तरफ़ तेरी आँखें जादू टोना एक तरफ़. Happy Birthday!"</p>
-      <button onclick="nextSlide(5)">Continue</button>
-    </div>
 
-     <!-- Slide 6 - Her Photo + Quote -->
-    <div class="slide" id="slide6">
-      <h2>💖 Just for You</h2>
-      <p>Look at this beautiful picture of you!</p>
-      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s10.jpg" alt="Birthday Girl" class="birthday-photo">
-      <p class="quote">"इतना खूबसूरत चेहरा है तुम्हारा !! हर दिल दीवाना है  तुम्हारा !! लोग कहते है चांद का टुकड़ा हो तुम !! लेकिन हम कहते है चांद टुकड़ा है तुम्हारा !!. Happy Birthday!"</p>
-      <button onclick="nextSlide(6)">Continue</button>
-    </div>
+   <!-- Slide 5 - Her Photo + Quote -->
+<div class="slide" id="slide5">
+  <h2>💖 Just for You</h2>
+  <p>Look at this beautiful picture of you!</p>
+  <img src="s7.jpg" alt="Birthday Girl" class="birthday-photo">
+  <p class="quote">"चाँदी सोना एक तरफ़ तेरा होना एक तरफ़, एक तरफ़ तेरी आँखें जादू टोना एक तरफ़. Happy Birthday!"</p>
+  <button onclick="nextSlide(5)">Continue</button>
+</div>
 
-     <!-- Slide 7 - Her Photo + Quote -->
-    <div class="slide" id="slide7"> 
-      <h2>💖 Just for You</h2>
-      <p>Look at this beautiful picture of you!</p>
-      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s13.jpg" alt="Birthday Girl" class="birthday-photo">
-      <p class="quote">"कोई इतना प्यारा कैसे हो सकता है, फिर सारे का सारा कैसे हो सकता है,<br>तुझसे बात हो तभी कमी महसूस होती है,<br>तेरे बगैर गुज़ारा कैसे हो सकता है<br>Happy Birthday!"</p>
-      <button onclick="nextSlide(7)">Continue</button>
-    </div>
 
-     <!-- Slide 8 - Her Photo + Quote -->
-    <div class="slide" id="slide8">
-      <h2>💖 Just for You</h2>
-      <p>Look at this beautiful picture of you!</p>
-      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\s23.jpg " alt="Birthday Girl" class="birthday-photo">
-      <p class="quote">"जब नज़रों से गिरती है वो परछाई हल्की,
-लगता है जैसे चांदनी ज़मीन पर उतरी।
-हर अदा में छुपा है कोई बेफ़िक्र सा राज़,
-जैसे बहारों ने खुद पहना हो साज।
+   <!-- Slide 6 - Her Photo + Quote -->
+<div class="slide" id="slide6">
+  <h2>💖 Just for You</h2>
+  <p>Look at this beautiful picture of you!</p>
+  <img src="s10.jpg" alt="Birthday Girl" class="birthday-photo">
+  <p class="quote">"इतना खूबसूरत चेहरा है तुम्हारा !! हर दिल दीवाना है  तुम्हारा !! लोग कहते है चांद का टुकड़ा हो तुम !! लेकिन हम कहते है चांद टुकड़ा है तुम्हारा !!. Happy Birthday!"</p>
+  <button onclick="nextSlide(6)">Continue</button>
+</div>
 
-हँसी उसकी जैसे कोयल की पहली पुकार,
-जो मन के सूने कोनों को दे जाए प्यार।
-बातों में उसकी है बारिश की सौंधी खुशबू,
-हर अल्फ़ाज़ बने जैसे कोई मीठा रुबू।
+<!-- Slide 7 - Her Photo + Quote -->
+<div class="slide" id="slide7"> 
+  <h2>💖 Just for You</h2>
+  <p>Look at this beautiful picture of you!</p>
+  <img src="s13.jpg" alt="Birthday Girl" class="birthday-photo">
+  <p class="quote">
+    "कोई इतना प्यारा कैसे हो सकता है, फिर सारे का सारा कैसे हो सकता है,<br>
+    तुझसे बात हो तभी कमी महसूस होती है,<br>
+    तेरे बगैर गुज़ारा कैसे हो सकता है<br>
+    Happy Birthday!"
+  </p>
+  <button onclick="nextSlide(7)">Continue</button>
+</div>
 
-नज़रों की गहराई में समंदर भी खो जाए,
-एक बार जो देखे, फिर दोबारा देखना चाहे।
-चाल में जैसे लहराती हो कोई शबनम,
-नज़ाकत में बसी हो खुद खुदा की करम।
+<!-- Slide 8 - Her Photo + Quote -->
+<div class="slide" id="slide8">
+  <h2>💖 Just for You</h2>
+  <p>Look at this beautiful picture of you!</p>
+  <img src="s23.jpg" alt="Birthday Girl" class="birthday-photo">
+  <p class="quote">
+    "जब नज़रों से गिरती है वो परछाई हल्की,<br>
+    लगता है जैसे चांदनी ज़मीन पर उतरी।<br>
+    हर अदा में छुपा है कोई बेफ़िक्र सा राज़,<br>
+    जैसे बहारों ने खुद पहना हो साज।<br><br>
 
-उसकी मौजूदगी से रौशन हो जाता है जहां,
-जैसे सुबह के साथ आता हो नया आसमां।
-वो है तो हर रंग पूरा, हर पल हसीन,
-जैसे अधूरी तहरीर में मिल जाए यक़ीन। Happy Birthday!"</p>
-      <button onclick="nextSlide(8)">Continue</button>
-    </div>
+    हँसी उसकी जैसे कोयल की पहली पुकार,<br>
+    जो मन के सूने कोनों को दे जाए प्यार।<br>
+    बातों में उसकी है बारिश की सौंधी खुशबू,<br>
+    हर अल्फ़ाज़ बने जैसे कोई मीठा रुबू।<br><br>
 
-    <!-- Slide 9 - Ending Video -->
-    <div class="slide" id="slide9">
-      <video id="endVideo" width="100%" controls autoplay poster="end-poster.jpg">
-        <source src="C:\Users\Stoic\OneDrive\Documents\SALONI\s-end-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <button onclick="nextSlide(9)">Continue</button>
-    </div>
+    नज़रों की गहराई में समंदर भी खो जाए,<br>
+    एक बार जो देखे, फिर दोबारा देखना चाहे।<br>
+    चाल में जैसे लहराती हो कोई शबनम,<br>
+    नज़ाकत में बसी हो खुद खुदा की करम।<br><br>
+
+    उसकी मौजूदगी से रौशन हो जाता है जहां,<br>
+    जैसे सुबह के साथ आता हो नया आसमां।<br>
+    वो है तो हर रंग पूरा, हर पल हसीन,<br>
+    जैसे अधूरी तहरीर में मिल जाए यक़ीन।<br>
+    Happy Birthday!"
+  </p>
+  <button onclick="nextSlide(8)">Continue</button>
+</div>
+
+
+  <!-- Slide 9 - Ending Video -->
+<div class="slide" id="slide9">
+  <video id="endVideo" width="100%" controls autoplay poster="end-poster.jpg">
+    <source src="s-end-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <button onclick="nextSlide(9)">Continue</button>
+</div>
+
 
     <!-- Slide 10 - Final Photo and Quote -->
-    <div class="slide" id="slide10">
-      <h2>🌟 One Last Thing...</h2>
-      <img src="C:\Users\Stoic\OneDrive\Documents\SALONI\sandr.jpg" alt="Beautiful Moment" class="final-photo">
-      <p class="final-quote">
-        "I wll always be there for you,<br>I will never hurt you,<br>I will never break you trust,<br>JUst stay confident,happy,and achive evry thing that you want in your life.Happy Birthday!"
-      </p>
-    </div>
-  </div>
+<div class="slide" id="slide10">
+  <h2>🌟 One Last Thing...</h2>
+  <img src="sandr.jpg" alt="Beautiful Moment" class="final-photo">
+  <p class="final-quote">
+    "I will always be there for you,<br>
+    I will never hurt you,<br>
+    I will never break your trust,<br>
+    Just stay confident, happy, and achieve everything that you want in your life.<br>
+    Happy Birthday!"
+  </p>
+</div>
+
 
   <script>
     function nextSlide(currentSlideNum) {
